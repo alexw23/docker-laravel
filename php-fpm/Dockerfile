@@ -28,6 +28,7 @@ RUN apk --no-cache --update --repository http://dl-3.alpinelinux.org/alpine/edge
     build-base \
     libtool \
     openssl \
+    openssl-dev \
 && pecl install imagick \
 && pecl install mongodb \
 && docker-php-ext-enable imagick \
@@ -66,8 +67,6 @@ RUN curl -SL https://download.newrelic.com/php_agent/archive/$NEWRELIC_VERSION/n
 && chmod 775 /usr/bin/newrelic-daemon \
 && mkdir /var/log/newrelic \
 && rm -rf ./newrelic-php5-$NEWRELIC_VERSION-linux-musl*
-
-RUN mkfifo /tmp/stdout && chmod 777 /tmp/stdout
 
 # PHP
 ADD laravel.ini /usr/local/etc/php/conf.d

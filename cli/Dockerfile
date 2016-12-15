@@ -28,6 +28,7 @@ RUN apk --no-cache --update --repository http://dl-3.alpinelinux.org/alpine/edge
     build-base \
     libtool \
     openssl \
+    openssl-dev \
 && pecl install imagick \
 && pecl install mongodb \
 && docker-php-ext-enable imagick \
