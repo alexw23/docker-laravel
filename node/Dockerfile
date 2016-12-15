@@ -1,6 +1,6 @@
 FROM node:5.1.0
 
-RUN npm install -g bower gulp
+RUN npm install -g bower gulp yarn
 
 RUN echo '{ "allow_root": true }' > /root/.bowerrc
 
