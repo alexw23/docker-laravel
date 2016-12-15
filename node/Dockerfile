@@ -1,6 +1,8 @@
 FROM node:7.2.1-alpine
 
-RUN npm install -g bower gulp yarn
+RUN apk --no-cache --no-cache add bash git openssh python gcc g++ make
+
+RUN npm install -g bower gulp yarn node-sass
 
 RUN echo '{ "allow_root": true }' > /root/.bowerrc
 
