@@ -1,4 +1,4 @@
-FROM node:5.1.0
+FROM node:7.2.1-alpine
 
 RUN npm install -g bower gulp yarn
 
